@@ -7,6 +7,7 @@ let baseRoom;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
+<<<<<<< HEAD
     //console.log(windowWidth);
     //console.log(windowHeight);
 
@@ -14,6 +15,13 @@ function setup(){
 
     baseRoom = new Room(ground - 150, gray)
 
+=======
+
+    //this line divides the lane from the idle resource gathering and fighter deployment visual sections
+    stroke(0,255,0);
+    strokeWeight(5);
+    line(0, windowHeight/2, windowWidth, windowHeight/2);
+>>>>>>> local
 }
 
 
