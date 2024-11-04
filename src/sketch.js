@@ -1,27 +1,31 @@
 "use strict";
 
+let wire;
+let silver;
+let gold;
 let ground;
 //test colour
 let gray = (75,75,75);
 let baseRoom;
 
+
+function preload(){
+    wire = loadImage('..//assets/wire.png')
+    silver = loadImage('../assets/silver_bar.png')
+    gold = loadImage('..//assets/gold_bar.png')
+}
+
 function setup(){
     createCanvas(windowWidth, windowHeight);
-<<<<<<< HEAD
-    //console.log(windowWidth);
-    //console.log(windowHeight);
 
     ground = windowHeight/2;
 
     baseRoom = new Room(ground - 150, gray)
 
-=======
-
     //this line divides the lane from the idle resource gathering and fighter deployment visual sections
     stroke(0,255,0);
     strokeWeight(5);
     line(0, windowHeight/2, windowWidth, windowHeight/2);
->>>>>>> local
 }
 
 
@@ -87,10 +91,28 @@ function draw() {
     //added just some visual elements to test the canvas
     rect(150, 150, 100, 50)
     rect(350, 350, 100, 50)
-    drawGround()
-    drawSky()
-    drawGround()
+    drawGround();
+    drawSky();
+    drawGround();
+    resourceBar();
 
 
     baseRoom.drawRoom()
+}
+
+
+function resourceBar() {
+    // Draw the resource bar background
+    fill('white');
+    rect(50, 25, 500, 60, 75);
+
+    // Set stroke and text properties
+    stroke('white');
+    fill('black');
+
+    // Display the images in the resource bar
+    image(wire, 70, 32, 60, 40);  // Adjust x, y, width, and height as needed
+    image(silver, 210, 32, 40, 40); // Adjust x, y, width, and height as needed
+    image(gold, 370, 32, 40, 40);  // Adjust x, y, width, and height as needed
+
 }
