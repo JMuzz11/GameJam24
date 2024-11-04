@@ -1,9 +1,12 @@
 "use strict";
 
-let wire;
-let silver;
-let gold;
-let ground;
+
+//Resources
+let wire, silver, gold;
+
+
+//Background
+let ground
 //test colour
 let gray = (75,75,75);
 let baseRoom;
