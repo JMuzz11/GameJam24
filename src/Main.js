@@ -40,6 +40,7 @@ function draw() {
     //These need to be fixed
     drawSky(ground);
     drawGround(ground);
+    drawTank();
 
     //Draw UI Elements
     UIBar.drawResourceBar();
