@@ -1,8 +1,7 @@
 "use strict";
 
 
-//Resources
-let wire, silver, gold;
+
 
 
 //Background
