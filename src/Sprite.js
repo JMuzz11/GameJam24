@@ -1,6 +1,19 @@
+//Sprite.js
+
+//Sprites
 let tank;
-let sprites = [];
+
+
+//Arrays
+let tanks = [];
+
+
+//Flags
 let tankCreated = false;
+
+//Sprite Images
+let tankImg = '../assets/tank.png';
+
 
 function drawTank() {
     if (mouseIsPressed && !tankCreated) {
@@ -9,10 +22,11 @@ function drawTank() {
         tank.h = 100;
         tank.y = ground;
         tank.x = 550;
-        tank.image = '../assets/tank.png';
+        tank.image = tankImg;
         tank.scale = 2
         
-        sprites.push(tank);
+        tanks.push(tank);
+        
 
         tankCreated = true;
     } else if (!mouseIsPressed) {
