@@ -31,6 +31,7 @@ function draw() {
     // Draw sky and ground from Scene.js
     drawSky(ground);
     drawGround(ground);
+    drawTank();
 
     // Draw the room instance
     baseRoom.drawRoom();
