@@ -1,4 +1,4 @@
-// sketch.js
+// Main.js
 
 "use strict";
 
@@ -6,6 +6,7 @@ let ground;
 let gray = [75, 75, 75];  // Corrected to array format for P5 color
 let baseRoom;
 let UIBar;
+let tankManager;
 
 
 function setup() {
@@ -14,9 +15,11 @@ function setup() {
     ground = windowHeight / 2;
     
     // Initialize baseRoom from Room.js
-    UIBar = new GameUI()
-    
+    UIBar = new GameUI()    
     baseRoom = new Room(ground - 150, color(gray));
+
+    // Initialize tankManager, with path to tank image
+    tankManager = new TankManager('../assets/tank.png');
 }
 
 function windowResize() {
@@ -40,7 +43,9 @@ function draw() {
     //These need to be fixed
     drawSky(ground);
     drawGround(ground);
-    drawTank();
+
+    //Use TankManager to create tanks when mouse is clicked    
+    tankManager.createTankOnClick();
 
     //Draw UI Elements
     UIBar.drawResourceBar();
